@@ -1,6 +1,6 @@
 mountpoints:
   /:
-    url: "https:// author-p150634-e1553296.adobeaemcloud.com/bin/franklin.delivery/waringme/pearson/main"
+    url: "https://author-p150634-e1553296.adobeaemcloud.com/bin/franklin.delivery/waringme/pearson/main"
     type: "markup"
     suffix: ".html"
 
