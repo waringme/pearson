@@ -35,7 +35,7 @@ export default function decorate(block) {
 console.log("CTA");
 console.log(cta);
 console.log("BODY");
-console.log(body.plaintext);
+console.log(body.html);
 
       destinationDiv.innerHTML = `
         <div class='destination-image'>
@@ -44,7 +44,7 @@ console.log(body.plaintext);
         <div class='destination-content'>
           <div class='destination-content-title'><h3>${cta}</h3></div>
 
-         <div class='destination-content-subtitle'>${body.plaintext}</div>
+         <div class='destination-content-subtitle'>${body.html}</div>
 
 
         </div>
