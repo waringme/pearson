@@ -22,7 +22,7 @@ export default function decorate(block) {
   destinationDiv.id = `destination-${slugID.textContent}`;
   block.querySelector('div:last-of-type').replaceWith(destinationDiv);
 
-  const urlEndpoint = cors + aem + "/graphql/execute.json/nationwide/mortgage-offer-by-slug;slug=" + slugID.textContent;
+  const urlEndpoint = cors + aem + "/graphql/execute.json/pearson1/getPageBySlugAndVariation;slug=" + slugID.textContent;
   console.log(urlEndpoint);
 
 // fetch('https://cors.cpilsworth.workers.dev/?target=https://publish-p150634-e1553296.adobeaemcloud.com/graphql/execute.json/nationwide/mortgage-offer-by-slug;slug=offer-1')
@@ -30,10 +30,12 @@ export default function decorate(block) {
  fetch(urlEndpoint)
     .then(response => response.json())
     .then(response => {
-      const {  bannerAd, cta } = response.data.yourPerfectMortgageMatchList.items[0];
-      const imageURL = `${aem}${bannerAd._dynamicUrl}`;
+      const {  mainImage, cta, body} = response.data.assessmentList.items[0];
+      const imageURL = `${aem}${mainImage._dynamicUrl}`;
 console.log("CTA");
 console.log(cta);
+console.log("BODY");
+console.log(body.plaintext);
 
       destinationDiv.innerHTML = `
         <div class='destination-image'>
@@ -41,7 +43,9 @@ console.log(cta);
         </div>
         <div class='destination-content'>
           <div class='destination-content-title'><h3>${cta}</h3></div>
-          <div class='destination-content-subtitle'><h4>${slugID.textContent}</h4></div>
+
+         <div class='destination-content-subtitle'>${body.plaintext}</div>
+
 
         </div>
       `;
