@@ -8,7 +8,7 @@ function getMetadata(name) {
 
 //const aem = "http://localhost:4503";
 //const aem = "https://publish-p107058-e1001010.adobeaemcloud.com";
-const aem = "https://publish-p150634-e1553296.adobeaemcloud.com/";
+const aem = "https://publish-p150634-e1553296.adobeaemcloud.com";
 const cors = "https://cors.cpilsworth.workers.dev/?target=";
 
 export default function decorate(block) {
