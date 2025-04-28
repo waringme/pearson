@@ -191,7 +191,7 @@
       },
       {
         "component": "text-input",
-        "name": "slug",
+        "name": "text",
         "value": "",
         "label": "SLUG",
         "valueType": "string"
