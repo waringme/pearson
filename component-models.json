@@ -184,20 +184,14 @@
     "fields": [
       {
         "component": "text-input",
-        "name": "title",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "text-input",
         "name": "text",
         "value": "",
-        "label": "SLUG",
+        "label": "Slug",
         "valueType": "string"
       }
     ]
   },
+  
   {
     "id": "fragment",
     "fields": [
