@@ -31,10 +31,13 @@ console.log(slugID.textContent);
  fetch(urlEndpoint)
     .then(response => response.json())
     .then(response => {
-      const {  mainImage, cta, body} = response.data.assessmentList.items[0];
+      const {  mainImage, title, cta, body} = response.data.assessmentList.items[0];
       const imageURL = `${aem}${mainImage._dynamicUrl}`;
-console.log("CTA");
-console.log(cta);
+
+      console.log(title);
+
+      console.log("CTA");
+      
 console.log("BODY");
 console.log(body.html);
 
@@ -43,7 +46,7 @@ console.log(body.html);
           <img src="${imageURL}" alt="ssssssssssss">
         </div>
         <div class='destination-content'>
-          <div class='destination-content-title'><h3>${cta}</h3></div>
+          <div class='destination-content-title'><h3>${title}</h3></div>
 
          <div class='destination-content-subtitle'>${body.html}</div>
 
