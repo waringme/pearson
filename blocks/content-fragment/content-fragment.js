@@ -37,7 +37,7 @@ console.log(slugID.textContent);
       console.log(title);
 
       console.log("CTA");
-      
+
 console.log("BODY");
 console.log(body.html);
 
@@ -47,8 +47,8 @@ console.log(body.html);
         </div>
         <div class='destination-content'>
           <div class='destination-content-title'><h3>${title}</h3></div>
-
-         <div class='destination-content-subtitle'>${body.html}</div>
+          <div class='destination-content-cta'><h3>${cta}</h3></div>
+           <div class='destination-content-subtitle'>${body.html}</div>
 
 
         </div>
